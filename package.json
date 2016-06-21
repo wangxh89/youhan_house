@@ -4,11 +4,14 @@
   "description": "this is a example app",
   "main": "web.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node web.js",
+    "build": "npm run build:image && npm run clean",
+    "build:image": "node scripts/image.js",
+    "clean": "node scripts/clean.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/huang-x-h/heroku-node-test.git"
+    "url": "git://github.com/wangxh89/heroku-node-test.git"
   },
   "keywords": [
     "example",
@@ -16,17 +19,18 @@
     "for",
     "nodejs"
   ],
-  "author": "huangxinghui",
+  "author": "wangxh89",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/huang-x-h/heroku-node-test/issues"
+    "url": "https://github.com/wangxh89/heroku-node-test/issues"
   },
-  "homepage": "https://github.com/huang-x-h/heroku-node-test",
+  "homepage": "https://github.com/wangxh89/heroku-node-test",
   "devDependencies": {
-    "logfmt": "^1.0.0-pre",
-    "express": "^3.4.8"
-  },
-  "engines": {
-    "node": "0.10.x"
+    "bluebird": "^3.3.1",
+    "bower": "^1.4.1",
+    "debug": "^2.2.0",
+    "express": "~4.9.x",
+    "gm": "^1.21.1",
+    "jade": "^1.9.2"
   }
 }
