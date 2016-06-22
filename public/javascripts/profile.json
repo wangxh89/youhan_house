@@ -8,10 +8,20 @@
         "date": [
             {
                 "startDate": "2016,6,3",
-                "headline": "2016,6,3",
+                "headline": "第二天",
                 "text": "人生第一张照片，都说毛孩刚出生不能拍照片，还是忍不住拍了",
                 "asset": {
                     "media": "images/maomao/20160603-073558.jpg",
+                    "credit": "",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "2016,6,4",
+                "headline": "6月4号",
+                "text": "戴上帽帽",
+                "asset": {
+                    "media": "images/maomao/20160604-090618.jpg",
                     "credit": "",
                     "caption": ""
                 }
@@ -25,18 +35,7 @@
                     "credit": "",
                     "caption": ""
                 }
-            },            
-            {
-                "startDate": "2016,6,4",
-                "headline": "6月4号",
-                "text": "戴上帽帽",
-                "asset": {
-                    "media": "images/maomao/20160604-090618.jpg",
-                    "credit": "",
-                    "caption": ""
-                }
             },
-
             {
                 "startDate": "2016,6,7",
                 "headline": "6月7号",
@@ -49,7 +48,7 @@
             },
             {
                 "startDate": "2016,6,14",
-                "headline": "6月14号",
+                "headline": "12天",
                 "text": "怎么没给我穿裤子",
                 "asset": {
                     "media": "images/maomao/20160614-172136.jpg",
@@ -103,6 +102,16 @@
                 "text": "刚洗完澡，人生第一张裸照",
                 "asset": {
                     "media": "images/maomao/20160618-205057.jpg",
+                    "credit": "",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "2016,6,21",
+                "headline": "6月21号",
+                "text": "自已趟在毯上玩",
+                "asset": {
+                    "media": "images/maomao/20160621-192806.jpg",
                     "credit": "",
                     "caption": ""
                 }
