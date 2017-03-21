@@ -1,7 +1,3 @@
-/**
- * Created by huangxinghui on 2016/1/25.
- */
-
 var fs = require('fs');
 var path = require('path');
 var profilePath = path.resolve(__dirname, '../public/javascripts/profile.json');
@@ -31,7 +27,6 @@ function refreshProfile(data) {
   })
 }
 
-//refreshProfile();
 
 module.exports = {
   refreshProfile: refreshProfile

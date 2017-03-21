@@ -1,7 +1,3 @@
-/**
- * Created by huangxinghui on 2015/5/2.
- */
-
 $(document).ready(function () {
     var profileData, showPopup = false;
 

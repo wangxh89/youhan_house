@@ -1,7 +1,3 @@
-/**
- * Created by huangxinghui on 2016/1/14.
- */
-
 var gm = require('gm');//.subClass({imageMagick: true});
 var moment = require('moment');
 var Promise = require('bluebird');
@@ -21,6 +17,7 @@ fs.readdir(untrimmedPath, function(err, files) {
 
   var promises = [];
   // change chinese name, because imagemagick dose not known
+  // 遍历untrimmedPath目录所有的文件，改为临时名称 ，并转换图片
   files.forEach(function(file) {
     if (fs.statSync(path.join(untrimmedPath, file)).isFile()) {
       promises.push(new Promise(function(resolve, reject) {
@@ -30,7 +27,7 @@ fs.readdir(untrimmedPath, function(err, files) {
       }));
     }
   });
-
+  //全部转换完毕后，刷新profile文件
   Promise.all(promises).then(function(data) {
     profile.refreshProfile(data);
   })
@@ -54,18 +51,25 @@ function changeTempName(filePath, callback) {
   });
 }
 
-
+/**
+ * 转换文件
+ * @param  {[type]} fileName [description]
+ * @param  {[type]} destPath [description]
+ * @param  {[type]} resolve  [description]
+ * @return {[type]}          [description]
+ */
 function convertImage(fileName, destPath, resolve) {
   var filePath = path.join(trimPath, fileName + fileExt);
 
-  //
+  //读取trim目录中元数据信息
   gm(filePath).identify(function(err, metadata) {
     if (err) throw err;
 
     var originalDate = moment(metadata['Profile-EXIF']['Date Time Original'], 'YYYY:MM:DD HH:mm:ss');
     var newFileName = originalDate.format('YYYYMMDD-HHmmss') + fileExt;
 
-    // copy original image order by dateTimeOriginal   将trim 目录中的文件 拷贝到 original目录（修改文件名为 日期）
+    // copy original image order by dateTimeOriginal
+    // 将trim 目录中的文件 拷贝到 original目录（修改文件名为 日期）
     fs.createReadStream(filePath).pipe(
         fs.createWriteStream(path.join(originalPath, newFileName)));
 
