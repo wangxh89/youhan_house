@@ -9,13 +9,13 @@
 
 npm run build
 
-1. image.js 会读取 /public/images/untrimmed目录下文件  
+1. image.js 会读取 /public/images/untrimmed目录下文件
 
-2. 将untrimmed 目录中的文件 拷贝到trim 目录（文件名换为hash值）
+2. 将untrimmed 目录中的文件 拷贝到trim 目录（文件名换为hash值）主要是为了防止文件名中有中文名
 
 3. 对trim目录中的文件  进行读取日期，进行文件重命名，复制到/public/images/original。
 
-   然后进行压缩（压缩宽度为750px）以方便在网络上查看，  
+   然后进行压缩（压缩宽度为750px）以方便在网络上查看，
 
    将压缩后的版本复制到/public/images/maomao目录中
 
