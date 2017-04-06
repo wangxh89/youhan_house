@@ -7,7 +7,7 @@
 
 将原始图片保存到/public/images/untrimmed目录
 
-npm run build
+npm run build  [npm run build:image    npm run clean]
 
 1. image.js 会读取 /public/images/untrimmed目录下文件
 
